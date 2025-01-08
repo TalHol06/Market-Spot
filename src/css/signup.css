@@ -1,0 +1,47 @@
+.signup-header{
+  text-align: center;
+}
+
+.container{
+  margin: 20px;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  border-width: 10px;
+  border-color: black;
+  border: solid;
+  padding: 15px;
+}
+
+label, input{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+input{
+  height: 2.75vh;
+  width: 100%;
+  border-radius: 8px;
+  border: solid;
+  border-width: 1px;
+}
+
+form p{
+  font-size: 14px;
+}
+
+form button{
+  width: 100%;
+  height: 2.75vh;
+}
+
+.back-btn{
+  float: left;
+  
+}

@@ -1,0 +1,46 @@
+.items{
+  background-color: rgb(198, 222, 236);
+  border-radius: 12px;
+  height: 90vh;
+  width: 30%;
+  float: left;
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.items div{
+  background-color: rgb(147, 187, 231);
+  height: 10%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.section{
+  background-color: rgb(198, 222, 236);
+  height: 45vh;
+  float: right;
+  width: 65%;
+  margin-top: 10px;
+  margin-right: 20px;
+  border-radius: 12px;
+}
+
+.section div{
+  background-color: rgb(147, 187, 231);
+  margin: 10px;
+  width: 12%;
+  height: 95%;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.checkout{
+  background-color: rgb(198, 222, 236);
+  border-radius: 12px;
+  float: right;
+  clear: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  width: 65%;
+  height: 42.9vh
+}
