@@ -61,6 +61,33 @@ const pictures = sequelize.define('pictures',{
     tableName: 'pictures',
 });
 
+const accounts = sequelize.define('accounts',{
+    account_id:{
+        type: DataTypes.BIGINT,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    first_name:{
+        type: DataTypes.STRING(30),
+        allowNull: false,
+    },
+    last_name:{
+        type: DataTypes.STRING(30),
+        allowNull: false,
+    },
+    email:{
+        type: DataTypes.STRING(50),
+        unique: true,
+        allowNull: false,
+    },
+    password:{
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+},{
+    tableName: 'accounts',
+});
+
 
 sequelize.sync({force: true}).then(() => {
     console.log('Product table');
