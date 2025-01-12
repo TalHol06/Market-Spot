@@ -156,5 +156,15 @@ VALUES
 ('Pepperoni Pizza', 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRIevHBqY5oKLfmBO_3N7Y6SPNQhdOwOOlie9rZLzs1LUn_QF87nG9MvJFq0Pf8qHz0rQgkF7n3h3Jckvq0qbZtXBfcn3qopzFqliukcKH0'),
 ('French Fries', 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTq7KbkqpMd14E25CJzwL3kaMOdCiGYYlael8CzuaNQMs9fJijkNw56POFPb7w7uYz54Ysmsp-PyYeE-yLGZyBzpsYn8Ll_Wql6jM69giJgzaiyXSMNQxwx');
 
+CREATE TABLE accounts(
+    account_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password TEXT NOT NULL,
+    UNIQUE (email, password)
+);
+
 SELECT * FROM products;
 SELECT * FROM pictures;
+SELECT * FROM accounts;
