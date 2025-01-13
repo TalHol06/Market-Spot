@@ -7,6 +7,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function SignUp(){
     const navigate = useNavigate();
+    const url = import.meta.env.VITE_API_URL_TWO;
 
     const [fName, setFName] = useState('');
     const [lName, setLName] = useState('');
@@ -45,7 +46,7 @@ export default function SignUp(){
         };
 
         try{
-            const response = await fetch('http://localhost:5000/api/create', {
+            const response = await fetch(`${url}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
