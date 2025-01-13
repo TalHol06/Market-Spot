@@ -56,7 +56,7 @@ export default function Header(){
     return (
         <header className={styles.heading}>
             <div className={styles.logoContainer}>
-                <img src="https://logo.com/image-cdn/images/kts928pd/production/22cf427f4b43437ddf03686900c7518c5172429c-800x800.webp?w=512&q=70&fm=webp" className={styles.logo}/>
+                <img src="/client/assets/MarketSpotLogo.png" className={styles.logo}/>
             </div>
             <form className={styles.searchForm}>
                 <div className={styles.searchContainer}>
