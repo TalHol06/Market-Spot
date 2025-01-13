@@ -18,7 +18,7 @@ sequelize.authenticate()
 .catch(err => console.error('Unable to connect ', err));
 
 
-const products = sequelize.define('products',{
+export const products = sequelize.define('products',{
     product_id:{
         type: DataTypes.BIGINT,
         primaryKey: true,
@@ -38,7 +38,8 @@ const products = sequelize.define('products',{
         allowNull: false,
     },
 },  {
-        tableName: 'products'
+        tableName: 'products',
+        timestamps: false,
     
 });
 
@@ -92,7 +93,8 @@ export const accounts = sequelize.define('accounts',{
 });
 
 
-sequelize.sync({force: true}).then(() => {
+sequelize.sync({alter: true}).then(async () => {
+    // console.log(await products.findAll());
     console.log('Product table');
   }).catch(err => {
     console.error('Error ', err);

@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import { accounts } from './db.mjs';
+import { products } from './db.mjs';
 
 dotenv.config();
 
@@ -61,7 +62,7 @@ app.post('/api/create', async (req, res) =>{
         return res.status(201).json({ success: true, user: newUser });
     } catch (err){
         console.error('Error occured while creating your account: ' +err.message);
-        if (err.name === 'SequalizeUniqueConstraintError'){
+        if (err.name === 'SequelizeUniqueConstraintError'){
             return res.status(400).json({ error: 'Email already exists' });
         } else{
             return res.status(500).json({ error: 'Error creating your account' });
@@ -70,13 +71,24 @@ app.post('/api/create', async (req, res) =>{
 });
 
 // Get all accounts
-app.get('/api/accounts', async (res, req) =>{
+app.get('/api/accounts', async (req, res) =>{
     try{
         const allAccounts = await accounts.findAll();
         return res.status(200).json(allAccounts);
     } catch (err){
         console.error('Error fetching accounts: ' +err.message);
         return res.status(500).json({ error: 'Error fetching accounts' });
+    }
+});
+
+// Get all Products
+app.get('/api/products', async (req, res) =>{
+    try{
+        const allProducts = await products.findAll();
+        return res.status(200).json(allProducts);
+    } catch (err){
+        console.error(`Error fetching all products: ` +err.message);
+        return res.status(500).json({ error: 'Fetching all products failed' });
     }
 });
 
