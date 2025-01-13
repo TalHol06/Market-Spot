@@ -1,12 +1,15 @@
-const {Sequelize, DataTypes} = require ("sequelize");
+import { Sequelize, DataTypes } from "sequelize";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const sequelize = new Sequelize({
     host: 'localhost',
     dialect: 'postgres',
-    username: 'postgres',
-    password: 'Asdf8124$',
-    database: 'GroceryVault',
-    port: 5432,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    port: process.env.DB_PORT,
     logging: false,
 });
 
@@ -23,16 +26,16 @@ const products = sequelize.define('products',{
     },
     product_name:{
         type: DataTypes.STRING(100),
-        allowNULL: false,
+        allowNull: false,
         unique: true,
     },
     category:{
         type: DataTypes.STRING(50),
-        allowNULL: false,
+        allowNull: false,
     },
     price:{
         type: DataTypes.DECIMAL(6,2),
-        allowNULL: false,
+        allowNull: false,
     },
 },  {
         tableName: 'products'
@@ -61,7 +64,7 @@ const pictures = sequelize.define('pictures',{
     tableName: 'pictures',
 });
 
-const accounts = sequelize.define('accounts',{
+export const accounts = sequelize.define('accounts',{
     account_id:{
         type: DataTypes.BIGINT,
         primaryKey: true,

@@ -1,17 +1,17 @@
-.signupHeader{
+#signupHeader{
   text-align: center;
   position: relative;
 }
 
-.headerH3{
+#headerH3{
   margin-right: 65px;
 }
 
-.headerP{
+#headerP{
   margin-bottom: 30px;
 }
 
-.headerP::after{
+#headerP::after{
   content: '';
   position: absolute;
   bottom: -15px;
@@ -22,14 +22,14 @@
   background-color: rgb(23, 89, 151);
 }
 
-.container{
+#container{
   margin: 20px;
   display: flex;
   justify-content: center;
   height: 58vh;
 }
 
-.formContainer{
+#formContainer{
   display: flex;
   justify-content: center;
   border: solid;
@@ -41,14 +41,14 @@
 
 }
 
-.signupForm{
+#signupForm{
   border-width: 2px;
   border-color: black;
   padding: 15px;
   width: 100%;
 }
 
-.notice{
+#notice{
   margin: 0;
   float: right;
   font-weight: bold;
@@ -101,12 +101,12 @@ form button:disabled:hover{
   cursor: not-allowed;
 }
 
-.checkboxContainer{
+#checkboxContainer{
   display: flex;
   align-items: center
 }
 
-.checkboxP{
+#checkboxP{
   margin: 0;
 }
 
@@ -118,7 +118,7 @@ form button:disabled:hover{
   margin-right: 15px;
 }
 
-.backBtn{
+#backBtn{
  float: left; 
  display: block;
  width: 75px;
