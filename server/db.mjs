@@ -3,15 +3,20 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const sequelize = new Sequelize({
-    host: 'localhost',
-    dialect: 'postgres',
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-    port: process.env.DB_PORT,
-    logging: false,
-});
+const sequelize = process.env.DB_URL
+  ? new Sequelize(process.env.DB_URL)
+  : new Sequelize(
+      process.env.DB_NAME || '',
+      process.env.DB_USER || '',
+      process.env.DB_PASSWORD,
+      {
+        host: 'localhost',
+        dialect: 'postgres',
+        dialectOptions: {
+          decimalNumbers: true,
+        },
+      }
+    );
 
 sequelize.authenticate()  
 .then(() => console.log('Connected'))
