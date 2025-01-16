@@ -80,7 +80,7 @@ import TaterTots from './pages/Product/TaterTotes';
 import PepperoniPizza from './pages/Product/PepperoniPizza';
 import FrenchFries from './pages/Product/FrenchFries';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
