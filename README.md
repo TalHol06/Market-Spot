@@ -9,7 +9,7 @@ N/A
 ## Usage
 To view this site please visit the following url:
 
-{Pending}
+https://market-spot.onrender.com
 
 ## Display
 <img src="./client/assets/Screenshot 2025-01-13 220126.png"/>
