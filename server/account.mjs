@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors({origin: process.env.DB_FRONTEND_URL || 'http://localhost:3000'}));
 const secretKey = process.env.SECRET_KEY || 'default_secret_key';
 
 // Login
