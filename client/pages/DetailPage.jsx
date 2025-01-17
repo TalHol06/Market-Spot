@@ -14,7 +14,7 @@ export default function DetailPage(){
             <main id={styles.mainContainer}>
                 <div id={styles.container}>
                     <aside id={styles.productImg}>
-                        <img src="/client/assets/MarketSpotLogo.png" />
+                        <img src="../assets/MarketSpotLogo.png" />
                     </aside>
                     <section id={styles.info}>
                         <h2>Placeholder</h2>

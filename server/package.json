@@ -4,13 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
-    "start:client": "cd client && npm run dev",
-    "start:server": "cd server && node account.mjs",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "start": "node accounts.mjs --ignore client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
