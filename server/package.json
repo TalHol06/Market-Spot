@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node accounts.mjs --ignore client",
+    "start": "node account.mjs --ignore client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node seeds/index.js"
   },
