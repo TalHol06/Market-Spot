@@ -364,15 +364,15 @@ const router = createBrowserRouter([
         element: <Waffles />
       },
       {
-        path: '/VegetableOil',
+        path: '/TaterTots',
         element: <TaterTots />
       },
       {
-        path: '/VegetableOil',
+        path: '/PepperoniPizza',
         element: <PepperoniPizza />
       },
       {
-        path: '/VegetableOil',
+        path: '/FrenchFries',
         element: <FrenchFries />
       }
     ]

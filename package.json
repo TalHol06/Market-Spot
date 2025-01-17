@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start": "concurrently \"cd client && vite preview --port 8080\" \"npm run start:server\"",
     "start:client": "cd client && npm run dev",
     "start:server": "cd server && node account.mjs",
     "build": "cd client && npm run build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "vite build"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

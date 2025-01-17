@@ -11,4 +11,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react/jsx-runtime'],
   },
+  resolve: {
+    alias: {
+      'react/jsx-runtime': 'react/jsx-runtime'
+    }
+  },
 });
