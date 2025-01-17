@@ -4,7 +4,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const sequelize = process.env.DB_URL
-  ? new Sequelize(process.env.DB_URL)
+  ? new Sequelize(process.env.DB_URL, {
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false
+        }
+      }
+    })
   : new Sequelize(
       process.env.DB_DATABASE || '',
       process.env.DB_USER || '',
@@ -15,6 +22,10 @@ const sequelize = process.env.DB_URL
         dialect: 'postgres',
         dialectOptions: {
           decimalNumbers: true,
+          ssl: {
+            require: true,
+            rejectUnauthorized: false
+          }
         },
       }
     );
