@@ -5,8 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 4000,
+    port: process.env.VITE_PORT || 10000,
     open: true,
+  },
+  define: {
+    'process.env': process.env
   },
   optimizeDeps: {
     include: ['react/jsx-runtime'],
